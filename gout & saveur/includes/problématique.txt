@@ -1,0 +1,8 @@
+problématique: 
+nous avons tous entendu parler d'un restaurant réputé mais une fois sur place l'experience ne correspond pas à nos attentes souvent par manque de vision réaliste par exemple les touristes ne connaissant pas les lieux rencontrent des difficultés à trouver un restaurant qui leur convient à leurs preferences sans etre déçus. Nous visons a offrir une experience plus transparente et authentique en aidant les utilisateurs à decouvrir des restaurants qui leur correspondent réellement à leurs attentes grace à des avis fiables et une présentation immersive des lieux. 
+les points faibles dans les autres sites qui nous partage le theme: 
+exemple: YELP
+manuellement à partir d'une fenetre google maps dans le site 
+--le site ne detecte pas toujours les commentaires faux qui ne sont pas basés sur une expérience authentique 
+--son algorithme filtres ces avis mais parfois des avis legitimes peuvent etre masqués.
+  

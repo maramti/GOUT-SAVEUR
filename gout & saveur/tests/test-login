@@ -1,0 +1,45 @@
+<?php
+require_once '../includes/database.php';
+
+try {
+    // Test de connexion à la base de données
+    $pdo = new PDO("mysql:host=$hostname;dbname=$db_name", $db_user, $password);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    
+    // Test de la table utilisateur
+    $stmt = $pdo->query("SELECT COUNT(*) FROM utilisateur");
+    $count = $stmt->fetchColumn();
+    
+    echo "Connexion à la base de données réussie !<br>";
+    echo "La table utilisateur existe avec $count enregistrements.<br>";
+    
+    // Test d'insertion d'un utilisateur test
+    $stmt = $pdo->prepare("INSERT INTO utilisateur (nom, email, mot_de_passe) VALUES (?, ?, ?)");
+    $name = "maram";
+    $email = "ekhdemstp777";
+    $password = password_hash("test123", PASSWORD_DEFAULT);
+    
+    $stmt->execute([$name, $email, $password]);
+    $userId = $pdo->lastInsertId();
+    echo "Utilisateur test inséré avec succès ! ID: $userId<br>";
+    
+    // Test de login
+    $stmt = $pdo->prepare("SELECT * FROM utilisateur WHERE email = ?");
+    $stmt->execute([$email]);
+    $user = $stmt->fetch();
+    
+    if ($user && password_verify("test123", $user['mot_de_passe'])) {
+        echo "Login réussi pour l'utilisateur test !<br>";
+    } else {
+        echo "Échec du login pour l'utilisateur test.<br>";
+    }
+    
+    // Nettoyage (suppression de l'utilisateur test)
+    $stmt = $pdo->prepare("DELETE FROM utilisateur WHERE id = ?");
+    $stmt->execute([$userId]);
+    echo "Utilisateur test supprimé.<br>";
+    
+} catch(PDOException $e) {
+    echo "Erreur : " . $e->getMessage();
+}
+?>

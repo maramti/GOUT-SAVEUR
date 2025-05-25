@@ -1,0 +1,52 @@
+body{
+    background-image: none;
+    background-color: #f0f0f0;
+    overflow-x: hidden;
+    
+}
+
+
+.bloc1{
+    padding:10px;
+    position: relative;
+    top:80px;
+    left:350px;
+    width: 520px;
+    border-radius:15px ;
+    background-color:white;
+   transition: 200ms ease-in-out;
+}
+.bloc1:hover{
+    box-shadow: 5px 5px 10px gray;
+    scale:1.03;
+}
+
+.bloc1 img{
+    width: 500px;
+    height:400px;
+    position: relative;
+    
+    border:1px black solid;
+    border-radius: 15px;
+    z-index: 1;
+}
+.bloc2{
+    background-color:white;
+    position: relative;
+    top:110px;
+    width: 1000px;
+    left:10px;
+    padding: 10px;
+    border-radius: 15px;
+}
+.bloc-filtrage{
+    background-color: white;
+    position: relative;
+    left: 1060px;
+    bottom: 450px;
+    width: 410px;
+    height:420px;
+    border-radius: 15px;
+    
+    
+}

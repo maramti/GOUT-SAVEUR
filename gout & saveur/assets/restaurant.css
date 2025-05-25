@@ -1,0 +1,399 @@
+/* Polices élégantes */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap");
+
+/* Reset général */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Corps de la page */
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-image: url("bglog.png"); /* Remplace par le chemin de ton image */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* En-tête */
+header {
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+/* Barre supérieure */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+}
+
+/* Logo */
+.logo {
+  height: 60px;
+}
+
+/* Barre de navigation */
+.nav-buttons a {
+  margin-left: 25px;
+  text-decoration: none;
+  font-weight: 750;
+  color: orangered ;
+  transition: color 0.3s;
+  font-size: 18px;
+  position:relative;
+  right:15px;
+
+}
+
+.nav-buttons a:hover {
+  color: #d47005;
+  ;
+}
+.user-icon {
+  position: relative;
+  font-size: 20px;
+  color: bisque;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.fa-user {
+  transition: 200ms color ease-in;
+}
+
+.fa-user:hover {
+  color: #ff786b;
+}
+
+/* Dropdown caché par défaut */
+.dropdown {
+  display: none; /* Changé de 'block' à 'none' */
+  position: absolute;
+  right: 0; /* Aligné à droite de l'icône */
+  top: 100%; /* En dessous de l'icône */
+  border: 1px bisque solid;
+  width: 230px;
+  background: #2a2a2a; /* Fond sombre pour meilleur contraste */
+  z-index: 900;
+
+}
+
+/* Afficher le dropdown au survol */
+.user-icon:hover .dropdown {
+  display: block;
+}
+
+
+
+.item_user {
+  display: block;
+  padding: 12px 15px;
+  color: bisque;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 228, 196, 0.2);
+  transition: background-color 0.2s;
+}
+
+.item_user:hover {
+  background-color: rgba(255, 228, 196, 0.1);
+}
+
+.item_user i {
+  font-size: 13px;
+  margin-right: 10px; /* Espace entre l'icône et le texte */
+}
+
+/* Barre de recherche */
+.search-bar {
+  width: 900px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 30px;
+  border: 1px solid rgba(4, 4, 4, 0.3);
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Blur effect */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  color: #333;
+  transition: 0.3s ease;
+}
+
+.search-bar:focus {
+  border-color: #222;
+  outline: none;
+  background: rgba(255, 255, 255, 0.489);
+}
+
+
+/* Titre principal */
+h1.page-title {
+  font-size: 70px;
+  color: #ff7660;
+  text-align: center;
+  margin-top: 60px;
+  letter-spacing: 2px;
+  font-family: 'Playfair Display', serif;
+}
+
+/* Slogan */
+.slogan {
+  text-align: center;
+  font-size: 16px;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  color: #e0e0e0;
+  margin-top: 20px;
+}
+
+/* Nom + note */
+.name-rating {
+  text-align: center;
+  padding: 30px 10px 10px;
+}
+
+.name-rating h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  margin: 0;
+}
+
+.name-rating p {
+  margin: 8px 0;
+  font-size: 18px;
+  color: #666;
+}
+
+.stars {
+  color: #edcd3c;
+  font-size: 20px;
+}
+
+/* Galerie */
+.gallery {
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+}
+
+.image-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-image img {
+  width: 700px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.main-image img:hover {
+  transform: scale(1.01);
+}
+
+.thumbnails {
+  display: flex;
+  margin-top: 15px;
+}
+
+.thumbnails img {
+  width: 130px;
+  height: 85px;
+  object-fit: cover;
+  margin: 0 6px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.thumbnails img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Description */
+.description {
+  max-width: 850px;
+  margin: 40px auto;
+  padding: 0 25px;
+  font-size: 18px;
+  text-align: center;
+  font-style: italic;
+  color: #444;
+}
+
+/* Bouton principal */
+button {
+  display: block;
+  margin: 30px auto;
+  padding: 12px 30px;
+  font-size: 16px;
+  border: none;
+  background-color: #d47005;
+  color: white;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #d47005;
+  transform: translateY(-2px);
+}
+
+/* Avis */
+.reviews {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+.reviews h2 {
+  text-align: center;
+  font-size: 28px;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 30px;
+}
+
+.review {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 25px 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+  transition: box-shadow 0.3s;
+}
+
+.review:hover {
+  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+}
+
+.review h3 {
+  font-family: 'Playfair Display', serif;
+  margin: 0 0 8px;
+  font-size: 20px;
+}
+
+.review p {
+  margin: 5px 0;
+  color: #555;
+}
+
+.review ul {
+  padding-left: 0;
+  list-style-type: none;
+  margin-top: 10px;
+  color: #666;
+}
+
+.review ul li {
+  margin-bottom: 5px;
+}
+
+/* Popup */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background-color: #fff;
+  padding: 35px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 520px;
+  position: relative;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+  font-family: 'Open Sans', sans-serif;
+}
+
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  font-size: 26px;
+  cursor: pointer;
+  color: #999;
+}
+
+.popup-content h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.popup-content input,
+.popup-content textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 15px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.popup-content button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  background-color: #d47005;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.popup-content button:hover {
+  background-color: #d47005;
+}
+
+/* Center the star container */
+#starRating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+/* Style each star */
+#starRating span {
+  font-size: 48px; /* 2x bigger (24px * 2) */
+  cursor: pointer;
+  color: lightgray;
+  transition: color 0.2s;
+  padding: 0 5px;
+}
+
+/* When selected */
+#starRating span.selected {
+  color: goldenrod;
+}
+
+/* On hover */
+#starRating span.hovered {
+  color: gold;
+}
+.popup-content label {
+  font-size: 18px;
+  font-weight: 750;
+
+  
+}
